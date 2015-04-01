@@ -14,8 +14,7 @@
     i -= 1
     j += 1
   end
-  puts str.capitalize
   str
 end
 
-p palindrome('leveled') == 'deleveled'
+p palindrome('stefanie')
