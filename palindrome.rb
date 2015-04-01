@@ -1,3 +1,5 @@
+ #input a string and convert that string to a palindrome
+
  def palindrome(string)
   str = string
   reverse = str.reverse
@@ -15,4 +17,4 @@
   p str
 end
 
-palindrome('leveled')
+p palindrome('leveled') == 'deleveled'
