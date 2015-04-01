@@ -1,7 +1,7 @@
  #input a string and convert that string to a palindrome
 
  def palindrome(string)
-  str = string
+  str = string.downcase
   reverse = str.reverse
   i = -1
   j = 0
@@ -14,7 +14,8 @@
     i -= 1
     j += 1
   end
-  p str
+  puts str.capitalize
+  str
 end
 
 p palindrome('leveled') == 'deleveled'
