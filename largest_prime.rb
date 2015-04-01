@@ -5,11 +5,21 @@
 require 'prime'
 
 def largest_prime(num)
-  i = num - 1
-  until Prime.prime?(i)
-    i -= 1
+  j = num
+  i = 2
+  while i < num
+    if num % i == 0
+      j = num/i
+      if Prime.prime?(j)
+        return puts j
+      else
+        i += 1
+      end
+    else
+      i += 1
+    end
   end
-  puts i
+  puts 'no prime factor'
 end
 
 largest_prime(600851475143)
