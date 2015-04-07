@@ -25,7 +25,7 @@ def prime_squares(num)
     if helper(a.first) > most_consecutives
       most_consecutives = helper(a.first)
       sum = a.first
-      a = a.select {|n| n if n > Prime.first(most_consecutives).inject(:+)}
+      a = a.select {|n| n if n > Prime.first(most_consecutives + 1).inject(:+)}
     end
     a.shift
   end
@@ -33,25 +33,26 @@ def prime_squares(num)
 end
 
 def helper(num)
-  a = []
+  a =[]
   Prime.each(num) do |prime|
     a << prime
   end
-    a.each_with_index do |number, indx|
-      sum = number
-      j = 1
-      until sum >= num
-        sum += a[indx + j]
-        j += 1
-      end
-      if num == sum
-        return j
-      end
-    end
-    0
+  sum = num
+  j = 1
+  until sum >= num
+    sum += a[j]
+    j += 1
   end
+  if num == sum
+    return j
+  else
+    a.shift
+    helper(a.first)
+  end
+  0
+end
 
-prime_squares(1_000_000)
+prime_squares(1_000)
 
 
 
