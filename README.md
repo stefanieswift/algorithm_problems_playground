@@ -1,6 +1,6 @@
 #<center>Welcome to my algorithm problem playground. 
 ----
-###<center>This is where I post my solutions to the problems I do for fun! 
+###<center>This is where I post my solutions to the problems I do for fun!! 
 ----
 <center>![funny algorithm](http://www.pagetrafficbuzz.com/wp-content/uploads/2011/08/googlejoke.jpg)
 
